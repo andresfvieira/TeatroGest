@@ -35,9 +35,28 @@ form {
 
   input, select {
     flex: 1; /* Hace que los campos ocupen el espacio disponible */
-    padding: 5px; /* Espacio dentro del campo */
+    padding: 7px; /* Espacio dentro del campo */
     border: 1px solid #ccc; /* Bordes para mejor visualización */
     border-radius: 5px; /* Bordes redondeados */
+    width: 400px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 170;
+    color: #303030; 
+  }
+  .options { 
+    display: none;
+  }
+  .options li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 170;
+    color: #303030;
+    padding: 7px;
+    list-style: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+   .options li:hover {
+    background-color: #990000;
   }
 
   button {
