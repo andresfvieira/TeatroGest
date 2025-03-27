@@ -1,0 +1,61 @@
+form {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    max-width: 400px; /* Limita el ancho del formulario */
+  }
+  
+  body {
+    display: flex; /* Para que sea un contenedor flexible que deje centrar el formulario*/
+    justify-content: center; /*Centran el formulario */
+    align-items: center;
+    /* height: 100vh;--> Para alinearlo al centro centro de la página*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 270; /* ExtraLight */
+    font-size: 15px;
+  }
+
+  div {
+    display: flex; /* Hace que los labels y campos estén en una línea */
+    align-items: center; /* Alinea verticalmente los labels y los inputs */
+    margin-bottom: 15px; /* Espaciado entre los campos */
+  }
+
+  label {
+    
+    width: 200px; /* Define el ancho de los labels, para que no se pongan en dos líneas, por ejemplo */
+    margin-right: 10px; /* Espaciado entre el label y el input */
+  }
+
+  input::placeholder {
+    font-family: 'Montserrat', sans-serif; /* Cambia la tipografía del texto */
+    font-size: 12px; /* Cambia el tamaño del texto */
+    color: #303030; /* Cambia el color del texto */
+    font-weight: 270;
+  }
+
+  input, select {
+    flex: 1; /* Hace que los campos ocupen el espacio disponible */
+    padding: 5px; /* Espacio dentro del campo */
+    border: 1px solid #ccc; /* Bordes para mejor visualización */
+    border-radius: 5px; /* Bordes redondeados */
+  }
+
+  button {
+    display: block;
+    padding: 10px 15px;
+    background-color: #990000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+  }
+
+  button:hover {
+    background-color: #ececec; /* Cambio de color al pasar el cursor */
+    color: #990000;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+
+}

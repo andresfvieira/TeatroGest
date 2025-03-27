@@ -4,29 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevas reservas</title>
+    <link rel="stylesheet" href="/nuevas-reservas.css">
+    <link rel="stylesheet" href="/Montserrat-ExtraLight.otf">
+    <link rel="stylesheet" href="/PlayfairDisplay-Regular.ttf">
 </head>
 <body>
+    <!-- ¿Hay que poner action para conectarlo a la base de datos o que te mande a los resultados?/metodo get/query-->
     <form>
-        <label for="Nombre de teatro"></label>
+        <div>
+        <label for="Nombre de teatro">Nombre del teatro</label>
         <input type="text" id="nombreTeatro" name="nombreTeatro" placeholder="Escriba el nombre del teatro">
+        </div>
 
-        <label for="Localidad"></label>
-        <input type="text" id="LocalidadTeatro" name="LocalidadTeatro" placeholder="Escriba la localidad del teatro">
+        <div>
+        <label for="Localidad">Localidad del teatro</label>
+        <input type="text" id="LocalidadTeatro" name="LocalidadTeatro" placeholder="Escriba la localidad">
+        </div>
 
-        <label for="Código Postal"></label>
+        <div>
+        <label for="Código Postal">Código postal del teatro</label>
         <!-- input type="number" sirve como validación para que no deje escribir algo que no sea número-->
-        <input type="number" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal del teatro">
+        <input type="number" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal">
+        </div>
 
-        <label for="Tipo de sala"></label>
+        <div>
+        <label for="Tipo de sala">Tipo de sala</label>
         <!-- Desplegable con las opciones -->
         <select id="tipoSala" name="tipoSala">
+            <option value="selected"></option>
             <option value="ensayo">Ensayo</option>
             <option value="publico">Con público</option>
         </select>
+        </div>
+
+        <div>
+        <label for="Aforo">Aforo</label>
+        <input type="number" id="aforo" name="aforo" placeholder="Escriba el aforo de la sala">
+        </div>
         
-        <!-- Se podría poner aforo-->
-        <label for="Aforo"></label>
-        <input type="number" id="aforo" name="aforo">
+        
+        <button type="submit">Buscar</button>
+   
     </form>
 </body>
 </html>
