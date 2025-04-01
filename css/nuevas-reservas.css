@@ -1,14 +1,17 @@
+@import "tailwindcss";
+
 form {
     display: flex;
     flex-direction: column; /* Alinea los elementos verticalmente */
     max-width: 400px; /* Limita el ancho del formulario */
+    justify-content: center;
   }
   
   body {
     display: flex; /* Para que sea un contenedor flexible que deje centrar el formulario*/
     justify-content: center; /*Centran el formulario */
     align-items: center;
-    /* height: 100vh;--> Para alinearlo al centro centro de la página*/
+    height: 100vh;/*Para alinearlo al centro centro de la página*/
     font-family: 'Montserrat', sans-serif;
     font-weight: 270; /* ExtraLight */
     font-size: 15px;
@@ -29,8 +32,8 @@ form {
   input::placeholder {
     font-family: 'Montserrat', sans-serif; /* Cambia la tipografía del texto */
     font-size: 12px; /* Cambia el tamaño del texto */
-    color: #303030; /* Cambia el color del texto */
-    font-weight: 270;
+    color: #181818; /* Cambia el color del texto */
+    font-weight: 340;
   }
 
   input, select {
@@ -38,25 +41,10 @@ form {
     padding: 7px; /* Espacio dentro del campo */
     border: 1px solid #ccc; /* Bordes para mejor visualización */
     border-radius: 5px; /* Bordes redondeados */
-    width: 400px;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 170;
-    color: #303030; 
-  }
-  .options { 
-    display: none;
-  }
-  .options li {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 170;
-    color: #303030;
-    padding: 7px;
-    list-style: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-   .options li:hover {
-    background-color: #990000;
+    font-weight: 340;
+    color: #000000; 
   }
 
   button {
@@ -66,7 +54,7 @@ form {
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* cambia a la mano cuando pasa por el botón*/
     align-self: center;
     font-family: 'Playfair Display', serif;
     font-size: 14px;

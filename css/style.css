@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-montserrat{
+    font-family: 'MontserratExtraLight', sans-serif;
+  }
+
+   /* Apply the font to the body */
+   body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #181818;
+    font-weight: 340;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevas reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex justify-center items-center h-screen bg-gray-100 font-montserrat">
+
+    <form class="flex flex-col justify-center max-w-lg w-full p-6 bg-white rounded-lg shadow-md">
+        <div class="flex items-center mb-4">
+            <label for="nombreTeatro" class="w-48 mr-2 text-sm font-light text-gray-700">Nombre del teatro</label>
+            <input type="text" id="nombreTeatro" name="nombreTeatro" placeholder="Escriba el nombre del teatro"
+                class="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+
+        <div class="flex items-center mb-4">
+            <label for="LocalidadTeatro" class="w-48 mr-2 text-sm font-light text-gray-700">Localidad del teatro</label>
+            <input type="text" id="LocalidadTeatro" name="LocalidadTeatro" placeholder="Escriba la localidad"
+                class="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+
+        <div class="flex items-center mb-4">
+            <label for="codigoPostal" class="w-48 mr-2 text-sm font-light text-gray-700">Código postal del teatro</label>
+            <input type="number" id="codigoPostal" name="codigoPostal" placeholder="Escriba el código postal"
+                class="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+
+        <div class="flex items-center mb-4">
+            <label for="tipoSala" class="w-48 mr-2 text-sm font-light text-gray-700">Tipo de sala</label>
+            <select id="tipoSala" name="tipoSala"
+                class="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-black focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <option value="selected" disabled selected>Selecciona el tipo de sala</option>
+                <option value="ensayo">Ensayo</option>
+                <option value="publico">Con público</option>
+            </select>
+        </div>
+
+        <div class="flex items-center mb-4">
+            <label for="aforo" class="w-48 mr-2 text-sm font-light text-gray-700">Aforo</label>
+            <select id="aforo" name="aforo"
+                class="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-black focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <option value="selected" disabled selected>Selecciona el aforo</option>
+                <option value="pequeña">Hasta 10 personas</option>
+                <option value="mediana">Hasta 20 personas</option>
+                <option value="grande">Hasta 50 personas</option>
+                <option value="aforoEspecifico">Especifico</option>
+            </select>
+        </div>
+
+        <div class="flex items-center mb-4">
+            <input type="number" id="aforoEspecifico" name="aforoEspecifico" placeholder="Escriba el aforo de la sala"
+                class="flex-1 w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+
+        <button type="submit"
+            class="w-full py-2 px-4 bg-red-900 text-white font-serif text-sm rounded-md shadow-md hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            Buscar
+        </button>
+    </form>
+
+    <style>
+        /* Custom Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Playfair+Display:wght@400;700&display=swap');
+
+        /* Apply the font to the body */
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        input::placeholder {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            color: #181818;
+            font-weight: 340;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #990000;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</body>
+</html>
