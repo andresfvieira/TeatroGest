@@ -6,11 +6,11 @@
 
 @section("main")
 <main class="flex flex-col mt-[50px] ml-4 mr-4 lg:w-full">
-    <div class="lg:flex-justify-center lg:self-center border-b-[1px] lg:border-b-1 lg:mx-24 lg:w-320">
+    <div class="lg:flex-justify-center lg:self-center border-b-[1px] lg:border-b-1 lg:mx-24 lg:w-[1280px]">
         <h2>Preguntas Frecuentes</h2>
     </div>
     <!--preguntas-->
-    <div class="lg:flex-justify-center lg:self-center lg:w-320 mt-5">
+    <div class="lg:flex-justify-center lg:self-center lg:w-[1280px] mt-5">
         <details>
             <summary>¿Qué es esta plataforma?</summary>
             <p>Esta es una plataforma en línea que permite la gestión y reserva de salas para ensayos y funciones de
