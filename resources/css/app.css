@@ -2,60 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-svg{
+svg {
     width: 25px;
     height: 25px;
     color: #990000;
-
 }
-svg:hover{
+svg:hover {
     transform: scale(1.15); /* Escala al 115% */
     transition: transform 0.15s ease-in-out;
 }
 @font-face {
     font-family: "Playfair Display";
-    src: url("../src/font/PlayfairDisplay-Regular.ttf") format("truetype");
+    src: url("font/PlayfairDisplay-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-  }
-  @font-face {
+}
+@font-face {
     line-height: 1px;
     font-family: "Montserrat";
-    src: url("../src/font/Montserrat-Regular.ttf") format("truetype");
+    src: url("font/Montserrat-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-  }
-  body {
+}
+body {
     font-family: "Montserrat";
     font-size: 16px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-  /* Main ocupe todo el espacio y empuje al Footer hacia abajo */
-  main {
+}
+/* Main ocupe todo el espacio y empuje al Footer hacia abajo */
+main {
     flex: 1;
-  }
+}
 
-  /* Estilos titulos */
-  h1 {
+/* Estilos titulos */
+h1 {
     font-size: 36px;
-  }
-  h2 {
+}
+h2 {
     font-size: 28px;
     font-family: "Playfair Display";
-  }
-  h3 {
+}
+h3 {
     font-size: 20px;
     font-family: "Playfair Display";
-  }
+}
 
-  .font-montserrat {
+.font-montserrat {
     font-family: "Montserrat";
-  }
+}
 
-  /* Home */
-  /* .home-texto-bienvenida {
+/* Home */
+/* .home-texto-bienvenida {
     max-width: 600px;
     min-width: 300px;
   }
@@ -64,65 +63,63 @@ svg:hover{
     min-width: 324px;
   } */
 
-  .home-texto-bienvenida {
+.home-texto-bienvenida {
     line-height: 1.6rem;
-  }
-  .home-img-bienvenida {
+}
+.home-img-bienvenida {
     margin-left: 12px;
     width: 400px;
     float: right;
-  }
+}
 
-
-  .inputs-text {
+.inputs-text {
     border: solid 1px black;
     border-radius: 8px;
     padding: 4px;
     height: 35px;
     padding: 10px;
-  }
-  .gestion-reservas-select {
+}
+.gestion-reservas-select {
     border: solid 1px black;
     border-radius: 8px;
     height: 35px;
     padding-inline: 5px;
-  }
-  .button-primary-auto {
+}
+.button-primary-auto {
     background-color: #990000;
     color: white;
     border-radius: 8px;
     padding: 8px;
     height: 35px;
     text-align: center;
-  }
-  .button-secundary-auto {
+}
+.button-secundary-auto {
     background-color: black;
     color: white;
     border-radius: 8px;
     padding: 8px;
     height: 35px;
     text-align: center;
-  }
-  /*Style formregistro*/
-  /* * {
+}
+/*Style formregistro*/
+/* * {
     padding: 0;
     box-sizing: border-box;
   } */
 
-  .form-registro {
+.form-registro {
     background: #ffffff;
-
-    margin-top: 25px;
+    margin-top: 45px;
     border-radius: 4px;
     color: black;
-  }
+}
 
-  .form-registro h4 {
+.form-registro h4 {
     font-size: 22px;
     margin-bottom: 20px;
-  }
+}
 
-  .controls {
+.controls {
     background: #ffffff;
     padding: 10px;
     border-radius: 4px;
@@ -130,13 +127,13 @@ svg:hover{
     border: 1px solid #000000;
     font-size: 16px;
     color: #000000;
-  }
+}
 
-  ::placeholder {
+::placeholder {
     color: #000000;
-  }
+}
 
-  .button {
+.button {
     color: #ffffff;
     background-color: #990000;
     align-items: center;
@@ -145,55 +142,52 @@ svg:hover{
     text-align: center;
     width: 200px;
     margin-left: 33%;
-  }
+}
 
-  .titulo_pagina {
-    color: #000000;
-    font-size: 36px;
+.titulo_pagina {
     border-bottom: #000000 1px solid;
-  }
+}
 
-  /* Viewport en pantallas menores a 850px */
-  @media (max-width: 450px) {
+/* Viewport en pantallas menores a 850px */
+@media (max-width: 450px) {
     h2 {
-      font-size: 20px;
+        font-size: 20px;
     }
     body {
-      font-size: 12px;
+        font-size: 12px;
     }
-  }
-  /* Gestión reservas */
-  .titulo-gestion-reservas {
+}
+/* Gestión reservas */
+.titulo-gestion-reservas {
     border-bottom: solid 1px;
     width: 800px;
-  }
-  .gestion-reservas-contenedor-time {
+}
+.gestion-reservas-contenedor-time {
     width: 89px;
-  }
+}
 
-  /* Footer */
-  footer {
+/* Footer */
+footer {
     padding-inline: 3rem;
     padding-block: 0.8rem;
     background-color: white;
     border-top: 1px solid #d1d5dc;
-  }
-  .svg-redes {
+}
+.svg-redes {
     width: 25px;
-  }
+}
 
-   /*Modificar sala*/
-   .slider {
+/*Modificar sala*/
+.slider {
     -webkit-appearance: none;
     background-color: #990000;
     border-radius: 10px;
     border: #000000;
     border-width: 3px;
     padding: 2px;
+}
 
-  }
-
-  .slider::-webkit-slider-thumb {
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 12px;
@@ -204,143 +198,148 @@ svg:hover{
     border: none;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     transition: background 0.3s;
-  }
-
-  /* RESPONSIVE */
-  /* Viewport en pantallas menores a 850px */
+}
+#calendario {
+    width: 90%;
+    max-width: 600px;
+    min-width: 320px;
+    margin: 20px auto; /* Centrar el calendario */
+}
+/* RESPONSIVE */
+/* Viewport en pantallas menores a 850px */
 @media (max-width: 850px) {
     /* General */
     body {
-      font-size: 14px;
+        font-size: 14px;
     }
     main {
-      margin-top: 20%;
+        margin-top: 20%;
     }
     h3 {
-      font-size: 22px;
+        font-size: 22px;
     }
     /* Home */
     .home-texto-bienvenida {
-      line-height: 1.6rem;
+        line-height: 1.6rem;
     }
     .home-img-bienvenida {
-      width: 300px;
-      float: right;
+        width: 300px;
+        float: right;
     }
     /* Proximos eventos */
     #calendario {
-      display: flex;
+        display: flex;
     }
     .gestion-reservas-contenedor-date {
-      width: 60%;
+        width: 60%;
     }
     /* Gestión reservas */
     .titulo-gestion-reservas {
-      width: 650px;
+        width: 650px;
     }
     .gestion-reservas-contenedor-time {
-      width: 89px;
+        width: 89px;
     }
     /* Footer */
     .contenedor-logo-footer {
-      display: flex;
-      visibility: hidden;
+        display: flex;
+        visibility: hidden;
     }
     .contenedor-contacto-redes-footer {
-      flex-direction: column-reverse;
-      gap: 1rem;
+        flex-direction: column-reverse;
+        gap: 1rem;
     }
     .contenedor-contacto,
     .contenedor-redes,
     .contenedor-svg,
     .contenedor-svg {
-      align-items: center;
-      margin-left: 0;
-      text-align: center;
-      justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        text-align: center;
+        justify-content: center;
     }
     .contenedor-contacto-redes-footer {
-      flex-direction: column-reverse;
-      gap: 1rem;
+        flex-direction: column-reverse;
+        gap: 1rem;
     }
     .contenedor-logo-footer {
-      transition: opacity 0.2s ease-in-out;
-      opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
     }
-  }
+}
 
-  /* Viewport en pantallas menores a 640px */
-  @media (max-width: 640px) {
+/* Viewport en pantallas menores a 640px */
+@media (max-width: 640px) {
     /* Home */
     .home-texto-bienvenida {
-      line-height: 1.6rem;
+        line-height: 1.6rem;
     }
     .home-img-bienvenida {
-      width: 250px;
-      float: right;
+        width: 250px;
+        float: right;
     }
     /* Gestión reservas */
     .titulo-gestion-reservas {
-      width: 600px;
+        width: 600px;
     }
     .gestion-reservas-contenedor-time {
-      width: 89px;
+        width: 89px;
     }
-  }
-  /* Viewport en pantallas menores a 550px */
-  @media (max-width: 550px) {
+}
+/* Viewport en pantallas menores a 550px */
+@media (max-width: 550px) {
     /* General */
     body {
-      font-size: 12px;
+        font-size: 12px;
     }
     main {
-      margin-top: 10%;
+        margin-top: 10%;
     }
     h1 {
-      font-size: 24px;
+        font-size: 24px;
     }
     h3 {
-      font-size: 16px;
+        font-size: 16px;
     }
     /* Home */
     .home-texto-bienvenida {
-      min-width: 280px;
-      line-height: 1.6rem;
+        min-width: 280px;
+        line-height: 1.6rem;
     }
     .home-img-bienvenida {
-      width: 150px;
-      float: right;
+        width: 150px;
+        float: right;
     }
     /* Gestión reservas */
     .titulo-gestion-reservas {
-      width: 300px;
+        width: 300px;
     }
     .gestion-reservas-contenedor-date {
-      width: 140px;
+        width: 140px;
     }
     .gestion-reservas-contenedor-time {
-      width: 80px;
+        width: 80px;
     }
     /* Footer */
     .contenedor-logo-footer {
-      display: flex;
-      visibility: hidden;
+        display: flex;
+        visibility: hidden;
     }
     .contenedor-contacto-redes-footer {
-      flex-direction: column-reverse;
-      gap: 1rem;
+        flex-direction: column-reverse;
+        gap: 1rem;
     }
     .contenedor-contacto,
     .contenedor-redes,
     .contenedor-svg,
     .contenedor-svg {
-      align-items: center;
-      margin-left: 0;
-      text-align: center;
-      justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        text-align: center;
+        justify-content: center;
     }
     .contenedor-contacto-redes-footer {
-      flex-direction: column-reverse;
-      gap: 1rem;
+        flex-direction: column-reverse;
+        gap: 1rem;
     }
-  }
+}
