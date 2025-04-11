@@ -4,6 +4,7 @@ var calendario = new FullCalendar.Calendar(divCalendario, {
     initialView: "dayGridMonth",
     locale: "es",
 });
+var ruta = "fullCalendar/calendario-2025.json";
 //Función para leer archivo JSON
 function cargarEventosDesdeJSON(urlArchivoJSON, calendario) {
     fetch(urlArchivoJSON)
@@ -17,5 +18,5 @@ function cargarEventosDesdeJSON(urlArchivoJSON, calendario) {
             console.error("Error al cargar eventos desde JSON:", error);
         });
 }
-cargarEventosDesdeJSON("../libs/fullCalendar/calendario-2025.json", calendario);
+cargarEventosDesdeJSON(ruta, calendario);
 calendario.render();

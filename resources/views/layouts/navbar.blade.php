@@ -17,12 +17,12 @@ $homeSvg = file_get_contents(resource_path('svg/home.svg'));
                 <a href="{{ url('/') }}" class="animation-scale">{!! $homeSvg !!}</a>
                 <!--Enlace a FAQ-->
                 <a href="{{  url('proximos-eventos') }}" class="hover:text-[#990000]">Próximos eventos</a>
-                <a href="html/FAQ.html" class="hover:text-[#990000]">FAQ</a>
+                <a href="{{ url('faq') }}" class="hover:text-[#990000]">FAQ</a>
                 <!--Botón a Registro-->
-                <a href="html/formregistro.html"
+                <a href="{{ url('form-registro') }}"
                     class="bg-black hover:bg-[#5d5d5d] text-white p-2 rounded-lg w-auto mx-auto my-8 cursor-pointer">Registro</a>
                 <!--Botón a Iniciar sesión-->
-                <a href="html/iniciosesion.html"
+                <a href="{{ url('inicio-sesion') }}"
                     class="bg-[#990000] hover:bg-[#a84848] text-white p-2 rounded-lg w-auto mx-auto my-8 cursor-pointer">Iniciar
                     sesión</a>
             </div>
