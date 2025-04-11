@@ -7,12 +7,12 @@ use Illuminate\Http\Request;
 class PaginasController extends Controller
 {
   public function inicio(){
-    return view('welcome');
+    return view('inicio');
   }
   public function gestionSalas(){
-    return view('gestionSalas');
+    return view('');
   }
   public function reservasUsuarios(){
-    return view('reservasUsuarios');
+    return view('');
   }
 }

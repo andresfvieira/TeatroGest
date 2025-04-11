@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@include("layouts.navbar")
 
-<body>
-    <header>
-        @yield("header")
-    </header>
-    <main>
-        @yield("main")
-    </main>
-    <footer>
-        @yield("footer")
-    </footer>
-</body>
+@yield("main")
 
-</html>
+@include("layouts.footer")
