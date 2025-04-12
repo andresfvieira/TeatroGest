@@ -13,7 +13,7 @@ $homeSvg = file_get_contents(resource_path('svg/home.svg'));
             <!--Logo a la izquierda del nav con un tamaño de 50px-->
             <div class="flex"><img src="img/Logo.png" alt="Logo" class="self-start h-[50px]"></div>
             <!--Enlaces y botones a la derecha-->
-            <div class="flex items-center self-end gap-12 ">
+            <div class="flex items-center self-end gap-8 ">
                 <a href="{{ url('/') }}" class="animation-scale">{!! $homeSvg !!}</a>
                 <!--Enlace a FAQ-->
                 <a href="{{  url('proximos-eventos') }}" class="hover:text-[#990000]">Próximos eventos</a>
