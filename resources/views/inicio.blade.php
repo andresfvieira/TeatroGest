@@ -2,7 +2,7 @@
 
 @vite('resources/css/app.css')
 @section('title', 'Inicio')
-<!-- http://localhost/prueba-laravel/public -->
+<!-- http://localhost/TeatroGest/public -->
 
 @section("main")
 <main class="flex flex-col w-full justify-center mt-10% sm:mt-[50px] gap-4 md:lg-9 lg:gap-12 h-[59vh]">

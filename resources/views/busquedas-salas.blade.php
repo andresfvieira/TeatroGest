@@ -3,7 +3,7 @@
 <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet"/>
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
-<!-- http://localhost/prueba-laravel/public -->
+<!-- http://localhost/TeatroGest/public -->
 
 @section("main")
 <main class="m-4">

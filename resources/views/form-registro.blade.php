@@ -1,7 +1,7 @@
 @extends("layouts.plantilla")
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
-<!-- http://localhost/prueba-laravel/public -->
+<!-- http://localhost/TeatroGest/public -->
 
 @section("main")
 <main class="w-full flex flex-col">

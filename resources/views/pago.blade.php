@@ -2,7 +2,7 @@
 
 @vite('resources/css/app.css')
 @section('title', 'Pago')
-<!-- http://localhost/prueba-laravel/public -->
+<!-- http://localhost/TeatroGest/public -->
 
 @section("main")
 <main>
