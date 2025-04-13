@@ -1,7 +1,7 @@
 @extends("layouts.plantilla")
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
-<!-- http://localhost/TeatroGest/public -->
+<!-- http://localhost/prueba-laravel/public -->
 
 @section("main")
 <main class="w-full flex flex-col">
@@ -37,24 +37,26 @@
 
             </div>
             <!--Formulario registro-->
-
-            <div class="flex flex-col w-[600px] gap-5 mr-20">
-                <h2>Formulario de registro</h2>
-                <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre*" required>
-                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellidos*"
-                    required>
-                <input class="controls" type="text" name="Usuario" id="Usuario" placeholder="Usuario*" required>
-                <input class="controls" type="password" name="password" id="password" placeholder="Contraseña*"
-                    required>
-                <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico*"
-                    required>
-                <input class="controls" type="text" name="telefono" id="telefono" placeholder="Teléfono">
-                <p>*Campo obligatorio</p>
-                <!--Botón submit-->
-                <div>
-                    <input class="button" type="submit" value="Registrar">
+            <form action="{{ route('registro') }}" method="POST">
+                @csrf
+                <div class="flex flex-col w-[600px] gap-5 mr-20">
+                    <h2>Formulario de registro</h2>
+                    <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre*" required>
+                    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellidos*"
+                        required>
+                    <input class="controls" type="text" name="usuario" id="usuario" placeholder="Usuario*" required>
+                    <input class="controls" type="password" name="password" id="password" placeholder="Contraseña*"
+                        required>
+                    <input class="controls" type="email" name="email" id="email" placeholder="Correo electrónico*"
+                        required>
+                    <input class="controls" type="text" name="telefono" id="telefono" placeholder="Teléfono">
+                    <p>*Campo obligatorio</p>
+                    <!--Botón submit-->
+                    <div>
+                        <input class="button" type="submit" value="Registrar">
+                    </div>
                 </div>
-            </div>
+            </form>
             <!--Imagen foco-->
             <div>
                 <img src="img/FOCO.jpg" width="437" class="hidden md:block">
