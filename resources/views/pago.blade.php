@@ -2,7 +2,7 @@
 
 @vite('resources/css/app.css')
 @section('title', 'Pago')
-<!-- http://localhost/TeatroGest/public -->
+<!-- http://localhost/TeatroGest/public/pago -->
 
 @section("main")
 <main>

@@ -2,7 +2,7 @@
 
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
-<!-- http://localhost/TeatroGest/public -->
+<!-- http://localhost/teatrogest/public/modificar-salas -->
 
 @section("main")
 <main class="ml-25 mr-25">

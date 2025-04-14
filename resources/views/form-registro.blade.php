@@ -1,14 +1,14 @@
 @extends("layouts.plantilla")
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
-<!-- http://localhost/prueba-laravel/public -->
+<!-- http://localhost/prueba-laravel/public/form-registro -->
 
 @section("main")
 <main class="w-full flex flex-col">
     <h2 class="titulo_pagina ml-12">REGISTRO DE USUARIO</h2>
     <section class="form-registro m-20">
         <div class="flex">
-            <div class="flex flex-col self-center gap-10 ml-20 mt-[80px] mr-2">
+            <div class="flex flex-col self-center gap-10 ml-20 mt-[70px] mr-2">
                 <!--Icono user-->
                 <svg class="text-[#FFFFFF]" width="45" height="48.6" viewBox="0 0 45 45" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">

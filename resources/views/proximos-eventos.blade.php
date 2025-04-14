@@ -2,7 +2,7 @@
 
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
-<!-- http://localhost/TeatroGest/public -->
+<!-- http://localhost/teatrogest/public/proximos-eventos -->
 
 @section("main")
 <main class="flex content-center md:block">

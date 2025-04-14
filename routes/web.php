@@ -15,19 +15,25 @@ use App\Http\Controllers\AuthController;
 */
 
 Route::get('/', [App\Http\Controllers\PaginasController::class, 'inicio'])->name('inicio');
-Route::get('/proximos-eventos', [App\Http\Controllers\PaginasController::class, 'proximosEventos']);
-Route::get('/pago', [App\Http\Controllers\PaginasController::class, 'pago']);
-Route::get('/nuevas-reservas', [App\Http\Controllers\PaginasController::class, 'nuevasReservas']);
-Route::get('/modificar-salas', [App\Http\Controllers\PaginasController::class, 'modificarSalas']);
-Route::get('/inicio-sesion', [App\Http\Controllers\PaginasController::class, 'inicioSesion']);
-Route::get('/gestion-salas', [App\Http\Controllers\PaginasController::class, 'gestionSalas']);
-Route::get('/gestion-reservas', [App\Http\Controllers\PaginasController::class, 'gestionReservas']);
+Route::get('/proximos-eventos', [App\Http\Controllers\PaginasController::class, 'proximosEventos'])->name('proximos-eventos');
+Route::get('/pago', [App\Http\Controllers\PaginasController::class, 'pago'])->name('pago');
+Route::get('/inicio-sesion', [App\Http\Controllers\PaginasController::class, 'inicioSesion'])->name('inicio-sesion');
+Route::get('/gestion-reservas', [App\Http\Controllers\PaginasController::class, 'gestionReservas'])->name('gestion-reservas');
 Route::get('/form-registro', [App\Http\Controllers\PaginasController::class, 'formRegistro'])->name('form-registro');
-Route::get('/faq', [App\Http\Controllers\PaginasController::class, 'faq']);
-Route::get('/busquedas-salas', [App\Http\Controllers\PaginasController::class, 'busquedasSalas']);
+Route::get('/faq', [App\Http\Controllers\PaginasController::class, 'faq'])->name('faq');
+Route::get('/busquedas-salas', [App\Http\Controllers\PaginasController::class, 'busquedasSalas'])->name('busquedas-salas');
+//Rutas con acceso de solo Admin
+Route::middleware(['admin'])->group(function () {
+    Route::get('/nuevas-reservas', [App\Http\Controllers\PaginasController::class, 'nuevasReservas'])->name('nuevas-reservas');
+    Route::get('/modificar-salas', [App\Http\Controllers\PaginasController::class, 'modificarSalas'])->name('modificar-salas');
+    Route::get('/gestion-salas', [App\Http\Controllers\PaginasController::class, 'gestionSalas'])->name('gestion-salas');
+});
+//Rutas con método POST para datos sensibles
 Route::post('/iniciar-sesion', [AuthController::class, 'login'])->name('login');
-Route::post('form-registro',action:[AuthController::class, 'registro'])->name('registro');
-Route::get('/logout', function () {
+Route::post('form-registro', action: [AuthController::class, 'registro'])->name('registro');
+
+//Cierra sesión del usuario
+Route::get('/cerrar-sesion', function () {
     session()->flush(); // Borra toda la sesión
     return redirect('/');
-})->name('logout');
+})->name('salir');
