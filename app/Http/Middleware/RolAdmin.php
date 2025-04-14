@@ -16,6 +16,8 @@ class RolAdmin
      */
     public function handle(Request $request, Closure $next)
     {
+        // Comentar bloque if si quieres deshabilitar las restricciones de las páginas
+
         if (session('id_rol') != 1) {
             return redirect('/');
         }

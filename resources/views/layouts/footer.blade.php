@@ -22,7 +22,7 @@
 
         <!-- Contenedor derecho footer - contacto-->
         <div class="contenedor-contacto flex flex-col ml-14 items-end">
-            <p class="font-semibold text-xl text-[#990000]">Contacto</p>
+            <p class="font-semibold text-lg text-[#990000]">Contacto</p>
             <p class="m-0">956666666</p>
             <p class="m-0">appteatro@teatro.com</p>
             <p class="m-0">Av. de la paz 6, Sevilla, 41018</p>
