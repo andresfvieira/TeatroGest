@@ -25,7 +25,7 @@ class AuthController extends Controller
 
             return redirect('/');
         } else {
-            return redirect('/inicio-sesion');
+            return redirect('/inicio-sesion')->with('error', 'Contraseña o email incorrectos');
         }
     }
     public function registro(Request $respuesta)
