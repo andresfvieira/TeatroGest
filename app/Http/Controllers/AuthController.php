@@ -5,22 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use App\Models\Usuario;
 
 class AuthController extends Controller
 {
     public function login(Request $respuesta)
     {
-        $usuario = DB::table('usuarios')
-            ->join('roles', 'usuarios.id_rol', '=', 'roles.id_rol')
-            ->select('usuarios.*', 'roles.nombre_rol')
-            ->where('usuarios.email', $respuesta->email)
-            ->first();
+        $usuario = Usuario::with('rol')->where('email', $respuesta->email)->first();
         if ($usuario && password_verify($respuesta->password, $usuario->password)) {
             session([
                 'idusuarios' => $usuario->idusuarios,
                 'usuario' => $usuario->usuario,
                 'id_rol' => $usuario->id_rol,
-                'nombre_rol' => $usuario->nombre_rol
+                'nombre_rol' => $usuario->rol->nombre_rol
             ]);
 
             return redirect('/');
@@ -41,23 +38,22 @@ class AuthController extends Controller
                 'password' => 'required|string',
             ]);
             Log::info('Datos enviados al registrar: ', $validar);
-            // Crear nuevo usuario
-            DB::table('usuarios')->insert([
-                'nombre' => $validar['nombre'],
-                'apellidos' => $validar['apellidos'],
-                'telefono' => $validar['telefono'],
-                'email' => $validar['email'],
-                'usuario' => $validar['usuario'],
-                'password' => bcrypt($validar['password']),
-            ]);
 
+            // Crear nuevo usuario
+            $usuario = new Usuario();
+            $usuario->nombre = $validar['nombre'];
+            $usuario->apellidos = $validar['apellidos'];
+            $usuario->telefono = $validar['telefono'];
+            $usuario->email = $validar['email'];
+            $usuario->usuario = $validar['usuario'];
+            $usuario->password = bcrypt($validar['password']);
+            $usuario->save();
 
             // Redirigir con mensaje de éxito
-            return redirect()->route('inicio')->with('success', 'Usuario registrado con éxito');
+            return redirect()->route('form-registro')->with('success', 'Usuario registrado con éxito');
         } catch (\Exception $e) {
-            // Captura cualquier error y muestra el mensaje
-            Log::error('Error al registrar: ' . $e->getMessage());
-            return redirect()->route('form-registro');
+            // Manejo de otras excepciones
+            return redirect()->route('form-registro')->with('error', 'Error al registrar. Posible usuario o email ya existentes.');
         }
     }
 }

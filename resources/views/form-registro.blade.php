@@ -2,7 +2,6 @@
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
 <!-- http://localhost/prueba-laravel/public/form-registro -->
-
 @section("main")
 <main class="w-full flex flex-col">
     <h2 class="titulo_pagina ml-12">REGISTRO DE USUARIO</h2>
@@ -40,7 +39,11 @@
             <form action="{{ route('registro') }}" method="POST">
                 @csrf
                 <div class="flex flex-col w-[600px] gap-5 mr-20">
-                    <h2>Formulario de registro</h2>
+                    @if (session('success'))
+                    <p class="text-green-500">{{ session('success') }}</p>
+                    @else
+                    <p class="text-red-500">{{ session('error') }}</p>
+                    @endif
                     <input class="controls" type="text" name="nombre" id="nombre" placeholder="Nombre*" required>
                     <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellidos*"
                         required>

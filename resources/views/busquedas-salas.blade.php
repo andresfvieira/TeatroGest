@@ -24,7 +24,7 @@
             <div id="contenedor-del-mapa" class="absolute w-[800px] h-[500px]"></div>
         </div>
         <div>
-            <a href="Pago.html"
+            <a href="{{ url('pago') }}"
                 class="bg-[#990000] hover:bg-[#a84848] text-white p-2 rounded-lg w-auto mx-auto my-8 cursor-pointer">Reservar</a>
         </div>
     </section>

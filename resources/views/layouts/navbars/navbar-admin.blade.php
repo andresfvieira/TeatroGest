@@ -1,6 +1,6 @@
-<div class="absolute inset-0 flex justify-center h-[100px] contenedor-decoration-navbar">
+<!-- <div class="absolute inset-0 flex justify-center h-[100px] contenedor-decoration-navbar">
     <img src="img/deco-nav.png" alt="Imagen decorativa del nav" class="h-[35px] w-auto">
-</div>
+</div> -->
 <div class="relative flex items-center justify-between px-4">
     <!--Logo a la izquierda del nav con un tamaño de 50px-->
     <div class="flex"><img src="img/Logo.png" alt="Logo" class="self-start h-[50px]"></div>

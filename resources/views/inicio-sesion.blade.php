@@ -2,7 +2,7 @@
 
 @vite('resources/css/app.css')
 @section('title', 'Proximos eventos')
-<!-- http://localhost/prueba-laravel/public/inicio-sesion -->
+<!-- http://localhost/TeatroGest/public/inicio-sesion -->
 
 @section("main")
 <main>
