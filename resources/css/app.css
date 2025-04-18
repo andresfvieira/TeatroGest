@@ -24,6 +24,9 @@ svg:hover {
     font-weight: normal;
     font-style: normal;
 }
+nav{
+    height: 100px;
+}
 body {
     font-family: "Montserrat";
     font-size: 16px;
@@ -34,6 +37,7 @@ body {
 /* Main ocupe todo el espacio y empuje al Footer hacia abajo */
 main {
     flex: 1;
+    margin-top: 0%;
 }
 
 /* Estilos titulos */
@@ -214,7 +218,7 @@ footer {
         font-size: 14px;
     }
     main {
-        margin-top: 20%;
+        margin-top: 0%;
     }
     h3 {
         font-size: 22px;
@@ -294,7 +298,8 @@ footer {
         font-size: 12px;
     }
     main {
-        margin-top: 10%;
+        margin-top: 30%;
+        margin-bottom: 30%;
     }
     h1 {
         font-size: 24px;
