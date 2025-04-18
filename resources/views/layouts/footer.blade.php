@@ -29,7 +29,7 @@
         </div>
     </div>
     <!-- Logo central footer -->
-    <!-- <div class="contenedor-logo-footer absolute left-1/2 transform -translate-x-1/2 bottom-[16px]">
+    <div class="contenedor-logo-footer absolute left-1/2 transform -translate-x-1/2 bottom-[16px]">
         <img src="{{ asset('img/deco-footer.png') }}" alt="footer-icon" class="min-w-8 h-[35px]">
-    </div> -->
+    </div>
 </footer>
