@@ -24,8 +24,13 @@ svg:hover {
     font-weight: normal;
     font-style: normal;
 }
-nav{
+nav {
     height: 100px;
+}
+.list-style-circle::before {
+    content: "•";
+    color: #990000;
+    margin-right: 0.8rem;
 }
 body {
     font-family: "Montserrat";
@@ -326,14 +331,17 @@ footer {
     .gestion-reservas-contenedor-time {
         width: 80px;
     }
+
     /* Footer */
+    /* Contiene a todo el contenido del footer */
+    .contenedor-contacto-redes-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
     .contenedor-logo-footer {
         display: flex;
         visibility: hidden;
-    }
-    .contenedor-contacto-redes-footer {
-        flex-direction: column-reverse;
-        gap: 1rem;
     }
     .contenedor-contacto,
     .contenedor-redes,
@@ -343,9 +351,5 @@ footer {
         margin-left: 0;
         text-align: center;
         justify-content: center;
-    }
-    .contenedor-contacto-redes-footer {
-        flex-direction: column-reverse;
-        gap: 1rem;
     }
 }

@@ -23,7 +23,7 @@
         </button>
     </div>
 
-    <!-- Menú (escritorio) -->
+    <!-- Menú Escritorio -->
     <div class="hidden md:flex flex-col items-end self-end gap-2 mt-2 md:gap-2">
         <div class="flex gap-4 items-center">
             <span class="navbar-text flex mr-2">
@@ -74,17 +74,17 @@
             <details class="w-full text-center">
                 <summary class="cursor-pointer text-[#990000] font-semibold py-2">Reservas</summary>
                 <div class="flex flex-col items-center pl-4">
-                    <a href="{{ url('nuevas-reservas') }}" class="hover:text-[#990000] py-1">Nuevas Reservas</a>
-                    <a href="{{ url('gestion-reservas') }}" class="hover:text-[#990000] py-1">Gestión reservas</a>
+                    <a href="{{ url('nuevas-reservas') }}" class="hover:text-[#990000] py-1 list-style-circle">Nuevas Reservas</a>
+                    <a href="{{ url('gestion-reservas') }}" class="hover:text-[#990000] py-1 list-style-circle">Gestión reservas</a>
                 </div>
             </details>
 
             <!-- Menú desplegable móvil: Salas -->
-            <details class="w-full text-center">
+            <details class="w-full self-start text-center">
                 <summary class="cursor-pointer text-[#990000] font-semibold py-2">Salas</summary>
-                <div class="flex flex-col items-center pl-4">
-                    <a href="{{ url('busquedas-salas') }}" class="hover:text-[#990000] py-1">Búsquedas Salas</a>
-                    <a href="{{ url('modificar-salas') }}" class="hover:text-[#990000] py-1">Modificar Salas</a>
+                <div class="flex flex-col pl-4">
+                    <a href="{{ url('busquedas-salas') }}" class="hover:text-[#990000] py-1 list-style-circle">Búsquedas Salas</a>
+                    <a href="{{ url('modificar-salas') }}" class="hover:text-[#990000] py-1 pr-3 list-style-circle">Modificar Salas</a>
                 </div>
             </details>
         </div>

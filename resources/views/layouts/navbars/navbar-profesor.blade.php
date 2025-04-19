@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <!-- Menú móvil -->
+    <!-- Menú desplegable para móvil -->
     <div x-show="open" x-transition class="absolute top-full left-0 w-full bg-white shadow-md rounded-b-xl md:hidden flex flex-col items-center gap-4 py-4 px-8 z-10">
         <a href="{{ url('/') }}" class="animation-scale">{!! $homeSvg !!}</a>
         <span class="navbar-text text-center">
