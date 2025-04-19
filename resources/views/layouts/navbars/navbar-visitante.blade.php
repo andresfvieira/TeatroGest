@@ -23,7 +23,7 @@
         </button>
     </div>
 
-    <!-- Menú (escondido en móviles, visible en md+) -->
+    <!-- Menú Escritorio -->
     <div class="hidden md:flex gap-4 items-center">
         <a href="{{ url('/') }}" class="animation-scale">{!! $homeSvg !!}</a>
 
