@@ -25,7 +25,9 @@ svg:hover {
     font-style: normal;
 }
 nav {
-    height: 100px;
+    height: 53px;
+    z-index: 50;
+    top: 0;
 }
 .list-style-circle::before {
     content: "•";
