@@ -30,7 +30,7 @@
                 <!-- Información de espacio seleccionado de "nuevas-reservas.blade.php" -->
                 <div>
                     <h4 class="text-lg font-semibold text-[#990000]"><?php echo e($espacio->nombre); ?></h4>
-                    <p>Sala: <?php echo e($espacio->nombre_sala); ?></p>
+                    <p class="font-montserrat">Sala: <?php echo e($espacio->nombre_sala); ?></p>
                     <p>Localidad: <?php echo e($espacio->localidad); ?></p>
                     <p>Dirección: <?php echo e($espacio->direccion); ?></p>
                     <p>Tel: <?php echo e($espacio->telefono); ?></p>

@@ -8,7 +8,7 @@
 <main class="flex-grow bg-white">
     <div x-data="{ openCiudades: false, openTipo: false, openFiltros: false, openAforo: false }" class="flex flex-col items-center min-w-[320px] gap-4 lg:items-start lg:flex-row">
         <!-- Sidebar de filtros -->
-        <aside class="w-64 px-2 shadow-md">
+        <aside class="w-52 px-2 shadow-md">
             <h2 id="h2" @click="openFiltros = !openFiltros">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2M6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2z" />
@@ -29,7 +29,11 @@
                             </svg></span>
                     </h3>
                     <div x-show="openCiudades" x-transition>
-                        @foreach (['Madrid', 'Barcelona', 'Sevilla', 'Málaga', 'Granada', 'Huelva', 'Valencia', 'Cádiz', 'Tarragona', 'Cádiz', 'Salamanca', 'León'] as $ciudad)
+                        <div class="mb-2">
+                            <!-- <h3 id="h3">Equipamiento</h3> -->
+                            <input type="text" name="localidad" value="{{ request()->input('localidad') }}" class="w-full border rounded p-1 mr-2" placeholder="Localidad">
+                        </div>
+                        @foreach (['Madrid', 'Barcelona', 'Sevilla', 'Málaga', 'Granada', 'Huelva', 'Valencia', 'Cádiz', 'Tarragona', 'Cádiz', 'Salamanca', 'León', 'Jaén'] as $ciudad)
                         <label class="block text-sm text-gray-600">
                             <input type="checkbox" name="ciudades[]" value="{{ $ciudad }}" class="mr-2">
                             {{ $ciudad }}
@@ -49,6 +53,7 @@
                                 <path fill="currentColor" d="M2 15.99c0-1.69 1.38-3.06 3.06-3.06h21.85c1.69 0 3.06 1.38 3.06 3.06c0 1.69-1.38 3.06-3.06 3.06H5.06C3.38 19.05 2 17.67 2 15.99" />
                             </svg></span>
                     </h3>
+
                     <div x-show="openTipo" x-transition>
                         @foreach (['Obra', 'Ensayo'] as $tipo)
                         <label class="block text-sm text-gray-600">

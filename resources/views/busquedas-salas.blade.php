@@ -31,7 +31,7 @@
                 <!-- Información de espacio seleccionado de "nuevas-reservas.blade.php" -->
                 <div>
                     <h4 class="text-lg font-semibold text-[#990000]">{{ $espacio->nombre }}</h4>
-                    <p>Sala: {{ $espacio->nombre_sala }}</p>
+                    <p class="font-montserrat">Sala: {{ $espacio->nombre_sala }}</p>
                     <p>Localidad: {{ $espacio->localidad }}</p>
                     <p>Dirección: {{ $espacio->direccion }}</p>
                     <p>Tel: {{ $espacio->telefono }}</p>

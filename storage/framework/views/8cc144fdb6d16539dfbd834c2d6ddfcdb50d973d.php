@@ -1,3 +1,5 @@
+
+
 <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/css/inicio.css']); ?>
 <!-- <?php echo app('Illuminate\Foundation\Vite')('resources/css/inicio.css'); ?> -->
 <?php $__env->startSection('title', 'Inicio'); ?>

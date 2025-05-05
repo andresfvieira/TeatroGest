@@ -1,3 +1,5 @@
+
+
 <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/css/gestion-reservas.css']); ?>
 <?php $__env->startSection('title', 'Proximos eventos'); ?>
 <!-- http://localhost/TeatroGest/public/gestion-reservas -->
